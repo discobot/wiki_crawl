@@ -1,6 +1,6 @@
 domain = "http://simple.wikipedia.org"
 start_page = "http://simple.wikipedia.org/wiki/Main_Page"
-article_pattern = domain + "/wiki/([0-9A-Za-z_]+)"
+article_pattern = domain + "/wiki/([\w\(\)]+)"
 
 article_crawlers = 10
 utility_crawlers = 5

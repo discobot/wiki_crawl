@@ -142,7 +142,7 @@ def UrlMaster():
                 if url in redirect_table:
                     url = redirect_table[url]
                 else:
-                    new_url = get_true_url(url)
+                    new_url = url
                     redirect_table[url] = new_url
                     url = new_url
                 #print(url)
@@ -184,7 +184,7 @@ def DataKeeper():
         counter = 0
         while True:
             name, article = data_queue.get(timeout=150)
-            f = open("data/" + str(name) + ".dump", "w")
+            f = open("cc_data/" + str(name) + ".dump", "w")
             f.write(article)
             counter += 1
             if counter % 100 == 0:
